@@ -1,24 +1,17 @@
-# feelingliublog
+# Feelingliu's Blog
 
-## Project setup
+## 本博客前端部分采用Vue开发，后端部分使用Go语言，采用Gin框架
+
+> 第一步：安装项目依赖
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+> 第二步：运行项目
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 正在更新中。。。
