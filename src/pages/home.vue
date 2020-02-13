@@ -1,12 +1,21 @@
 <template>
     <div>
-        home 
+        <nav-header></nav-header>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+    import NavHeader from './../components/NavHeader'
+    import NavFooter from './../components/NavFooter'
 
-export default {
-    name:'home',
-}
+    export default {
+        name:'nav-home',
+        components:{
+            NavHeader,
+            // eslint-disable-next-line vue/no-unused-components
+            NavFooter,
+        }
+    }
 </script>
+
