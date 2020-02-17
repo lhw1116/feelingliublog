@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-header></nav-header>
-        <router-view></router-view>
+        <div class="home"></div>
         <nav-footer></nav-footer>
     </div>
 </template>
@@ -19,4 +19,10 @@
         }
     }
 </script>
+<style lang="scss">
+    .home{
+        display: inline-block;
+        height: 864px;
+    }
+</style>
 

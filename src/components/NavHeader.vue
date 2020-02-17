@@ -1,32 +1,49 @@
-
-    <el-radio-group v-model="direction">
-        <el-radio label="ltr">从左往右开</el-radio>
-        <el-radio label="rtl">从右往左开</el-radio>
-        <el-radio label="ttb">从上往下开</el-radio>
-        <el-radio label="btt">从下往上开</el-radio>
-    </el-radio-group>
-
-    <el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
-        点我打开
-    </el-button>
-
-    <el-drawer
-            title="我是标题"
-            :visible.sync="drawer"
-            :direction="direction"
-            :before-close="handleClose">
-        <span>我来啦!</span>
-    </el-drawer>
-
+<template>
+    <div class="index">
+        <div class="container">
+            <div class="l-index">
+                <a href="javascript:;"><img src="../assets/shouye.png" height="20px">文章</a>
+                <a href="javascript:;"><img src="../assets/fenlei.png" height="20px">分类</a>
+                <a href="javascript:;"><img src="../assets/source.png" height="20px">资源</a>
+                <a href="javascript:;"><img src="../assets/about.png" height="20px">关于我</a>
+            </div>
+            <div class="r-index">
+                <a href="javascript:;"><img src="../assets/login.png" height="20px">登录</a>
+            </div>
+        </div>
+    </div>
+</template>
 
 <script>
     export default {
-        name: 'nav-header',
-        data() {
-            return {
-                drawer: false,
-                direction: 'rtl',
-            };
-        },
+        name:'nav-header'
     }
 </script>
+
+<style lang="scss">
+    .index{
+        height: 55px;
+        background-color: black;
+        border-bottom: 1px solid black;
+    }
+    .container{
+        width: 1440px;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        a{
+            display: inline-block;
+            color: white;
+            margin-right: 80px;
+            font-size: 15px;
+            //font-weight: bold;
+            &:hover{
+                    color: #FF6600;
+                }
+        }
+        
+    }
+    
+</style>
