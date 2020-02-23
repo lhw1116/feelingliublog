@@ -15,14 +15,11 @@ export default new Router({
            path:'/',
            name:'home',
            component:Home,
-           meta:{
-               title:'feelingliu-长情驿站'
-           }
        },
-        {
+       {
             path:'/login',
             name:'login',
             component:Login,
-        }
+       }
     ]
 });

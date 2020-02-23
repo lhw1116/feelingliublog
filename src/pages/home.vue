@@ -22,7 +22,7 @@
 <style lang="scss">
     .home{
         display: inline-block;
-        height: 864px;
+        height: 1864px;
     }
 </style>
 
