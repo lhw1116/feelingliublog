@@ -12,13 +12,15 @@
                     <li><a href="javascript:;">数据结构与算法</a></li>
                     <li><a href="javascript:;">关于</a></li>
                 </ul>
+
+
             </div>
         </div>
     </div>
 </template>
 <script>
     export default {
-        name:'nav-header'
+        name:'nav-header',
     }
 </script>
 
@@ -26,6 +28,10 @@
     .header{
         height: 50px;
         border-bottom: #e5e5e5 solid 1px;
+        background: #F5F5F5;
+        margin-right: auto;
+        margin-left: auto;
+        //position: fixed;
         .container{
             height: 50px;
             width: 1226px;
