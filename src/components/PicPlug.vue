@@ -22,6 +22,7 @@
         display:flex;
         justify-content:center;
         align-items:center;
+        margin-bottom: 200px;
         .container{
             display: inline-block;
             font-size: 36px;

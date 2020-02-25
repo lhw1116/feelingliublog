@@ -13,12 +13,13 @@
 
 <script>
     export default {
-        name:'nav-footer'
+        name:'nav-footer',
     }
 </script>
 
 <style lang="scss">
     .nav-footer{
+        margin-top: 100px;
         .container{
             height: 50px;
             width: 1560px;
@@ -40,11 +41,11 @@
         .left{
             a{
                 text-align: center;
-                font-size: 15px;
+                font-size: 13px;
                 color: #F5F5F5;
             }
             p{
-                font-size: 15px;
+                font-size: 13px;
             }
         }
     }
