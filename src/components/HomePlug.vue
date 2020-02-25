@@ -1,6 +1,6 @@
 <template>
     <div class="containe">
-        <List item-layout="horizontal" border="true">
+        <List item-layout="horizontal" size="large">
             <ListItem v-for="item in data" :key="item.title">
                 <ListItemMeta :avatar="item.avatar" :title="item.title" :description="item.description" />
                 {{ item.content }}
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
     export default {
         name: "homeplug",
         data () {
@@ -55,5 +54,10 @@
         width: 1440px;
         margin: 0 auto;
         border-top: #FF6600 solid 1px;
+        .articles{
+            width: 1440px;
+            margin: 0 auto;
+            li{}
+        }
     }
 </style>
