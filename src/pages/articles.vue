@@ -1,5 +1,13 @@
 <template>
-   <div></div>
+   <div class="box">
+      <div class="containe">
+         <div class="top"></div>
+         <div class="bottom">
+               <div class="myarticles"></div>
+               <div class="readmore"></div>
+         </div>
+      </div>
+   </div>
 </template>
 <script>
     export default {

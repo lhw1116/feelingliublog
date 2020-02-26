@@ -1,11 +1,13 @@
 <template>
     <div class="containe">
-        <List item-layout="horizontal" size="large">
+        <List item-layout="vertical">
             <ListItem v-for="item in data" :key="item.title">
                 <ListItemMeta :avatar="item.avatar" :title="item.title" :description="item.description" />
                 {{ item.content }}
             </ListItem>
         </List>
+        <div class="pages"></div>
+
     </div>
 </template>
 
@@ -42,6 +44,12 @@
                         description: 'This is description, this is description, this is description.',
                         avatar: 'https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar',
                         content: 'This is the content, this is the content, this is the content, this is the content.'
+                    },
+                    {
+                        title: 'This is title 3',
+                        description: 'This is description, this is description, this is description.',
+                        avatar: 'https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar',
+                        content: 'This is the content, this is the content, this is the content, this is the content.'
                     }
                 ]
             }
@@ -55,9 +63,8 @@
         margin: 0 auto;
         border-top: #FF6600 solid 1px;
         .articles{
-            width: 1440px;
-            margin: 0 auto;
-            li{}
         }
     }
 </style>
+
+

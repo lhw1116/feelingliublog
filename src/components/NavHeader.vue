@@ -46,8 +46,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .header-search{
-                margin-right: 500px;
+            .blog-order{
+                margin-left: 500px;
             }
             .blog-title{
                 a{
