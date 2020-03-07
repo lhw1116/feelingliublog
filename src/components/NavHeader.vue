@@ -9,7 +9,7 @@
             </div>
             <div class="blog-order">
                 <Menu mode="horizontal" :theme="theme1" active-name="1">
-                    <MenuItem name="1">Go基础</MenuItem>
+                    <MenuItem name="1">首页</MenuItem>
                     <MenuItem name="2">Docker系列</MenuItem>
                     <MenuItem name="3">计算机网络</MenuItem>
                     <MenuItem name="4">Leetcode</MenuItem>
