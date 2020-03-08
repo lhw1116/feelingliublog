@@ -2,16 +2,16 @@
     <div>
         <nav-header></nav-header>
         <pic-plug></pic-plug>
-        <HomePlug></HomePlug>
+        <articles></articles>
         <nav-footer></nav-footer>
     </div>
 </template>
 
 <script>
-    import NavHeader from './../components/NavHeader'
-    import NavFooter from './../components/NavFooter'
+    import NavHeader from '../components/NavHeader';
+    import NavFooter from '../components/NavFooter';
     import PicPlug from "../components/PicPlug";
-    import HomePlug from "../components/HomePlug";
+    import Articles from "../components/Articles";
 
     export default {
         name:'nav-home',
@@ -19,7 +19,7 @@
             PicPlug,
             NavHeader,
             NavFooter,
-            HomePlug,
+            Articles,
         }
     }
 </script>

@@ -16,13 +16,12 @@
 <style lang="scss">
     .pic-plug{
         height: 380px;
-        //background: url("./../assets/background.jpg") repeat center;
         background-image: url("./../assets/background.jpg");
         background-size: cover;
         display:flex;
         justify-content:center;
         align-items:center;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
         .container{
             display: inline-block;
             font-size: 36px;
