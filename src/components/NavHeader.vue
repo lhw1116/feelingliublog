@@ -9,18 +9,18 @@
             </div>
             <div class="blog-order">
                 <Menu mode="horizontal" active-name="1">
-                    <MenuItem name="1">首页</MenuItem>
-                    <MenuItem name="2">Docker系列</MenuItem>
-                    <MenuItem name="3">计算机网络</MenuItem>
-                    <MenuItem name="4">Leetcode</MenuItem>
+                    <MenuItem name="1" to="/">首页</MenuItem>
+                    <MenuItem name="2" to="/docker">Docker系列</MenuItem>
+                    <MenuItem name="3" to="/network">计算机网络</MenuItem>
+                    <MenuItem name="4" to="/leetcode">Leetcode</MenuItem>
                     <Submenu name="5">
                         <template slot="title">更多分类</template>
-                        <MenuItem name="3-1">数据结构</MenuItem>
-                        <MenuItem name="3-2">Nginx</MenuItem>
-                        <MenuItem name="3-3">K8S</MenuItem>
-                        <MenuItem name="3-4">Linux</MenuItem>
+                        <MenuItem name="3-1" to="/datastructure">数据结构</MenuItem>
+                        <MenuItem name="3-2" to="/nginx">Nginx</MenuItem>
+                        <MenuItem name="3-3" to="/k8s">K8S</MenuItem>
+                        <MenuItem name="3-4" to="/linux">Linux</MenuItem>
                     </Submenu>
-                    <MenuItem name="6">关于</MenuItem>
+                    <MenuItem name="6" to="/about">关于</MenuItem>
                 </Menu>
             </div>
         </div>

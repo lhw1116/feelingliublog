@@ -1,7 +1,7 @@
 <template>
     <div class="pic-plug">
         <div class="container">
-            <div class="toper"><pre>千 江 有 水 千 江 月 , 万 里 无 云 万 里 天</pre></div>
+            <div class="toper"><pre>星 空 不 问 赶 路 人 ，岁 月 不 负 有 心 人</pre></div>
             <div class="line"></div>
         </div>
     </div>
