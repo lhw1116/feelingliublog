@@ -1,13 +1,15 @@
 <template>
-    <div>111</div>
+  <div>111</div>
 </template>
 
 <script>
-    export default {
-        name: "Articles"
-    }
+export default {
+  name: "Articles",
+  data() {
+    return {};
+  }
+};
 </script>
 
-<style scoped>
-
+<style lang="scss">
 </style>
