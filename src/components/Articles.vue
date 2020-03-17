@@ -6,7 +6,10 @@
 export default {
   name: "Articles",
   data() {
-    return {};
+    return {
+      username: "",
+      password: ""
+    };
   }
 };
 </script>
