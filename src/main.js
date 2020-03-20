@@ -11,7 +11,7 @@ Vue.use(VueCookie);
 Vue.use(ElementUI);
 
 
-axios.defaults.baseURL = '/api';
+//axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 
 // axios.interceptors.response.use(function(response){

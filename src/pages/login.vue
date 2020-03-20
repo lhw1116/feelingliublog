@@ -10,14 +10,14 @@
         class="demo-ruleForm"
       >
         <el-form-item label="账号">
-          <el-input v-model="ruleForm.username"></el-input>
+          <el-input v-model="username"></el-input>
         </el-form-item>
         <el-form-item label="密码">
-          <el-input type="password" v-model="ruleForm.password"></el-input>
+          <el-input type="password" v-model="password"></el-input>
         </el-form-item>
         <el-form-item>
           <div class="login-botton">
-            <el-button type="primary" @click="submitForm('ruleForm')" round>登录</el-button>
+            <el-button type="primary" @click="login" round>登录</el-button>
           </div>
         </el-form-item>
       </el-form>
@@ -27,28 +27,48 @@
 
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "login",
   data() {
     return {
-      ruleForm: {
-        username: "",
-        password: ""
-      }
+      username: "",
+      password: ""
     };
   },
   methods: {
-    submitForm(formName) {
-      this.$refs[formName].validate(valid => {
-        if (valid) {
-          alert("submit!");
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
-      });
-    }
+    login() {
+      let { username, password } = this;
+      this.axios
+        .post("/login", {
+          username,
+          password
+        })
+        .then(res => {
+          this.$cookie.set("token", res.token, { expires: "Session" });
+          this.saveUserName(res.username);
+          this.$router.push({
+            name: "admin",
+            params: {
+              from: "login"
+            }
+          });
+        });
+    },
+    ...mapActions(["saveUserName"])
   }
+  // methods: {
+  //   submitForm(formName) {
+  //     this.$refs[formName].validate(valid => {
+  //       if (valid) {
+  //         alert("submit!");
+  //       } else {
+  //         console.log("error submit!!");
+  //         return false;
+  //       }
+  //     });
+  //   }
+  // }
 };
 </script>
 <style lang="scss">
