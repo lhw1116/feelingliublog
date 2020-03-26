@@ -11,42 +11,42 @@ import About from './pages/about'
 Vue.use(Router);
 
 export default new Router({
-    mode:'history',
-    routes:[
-       {
-           path:'/',
-           name:'home',
-           component:Home,
-       },
-       {
-            path:'/docker',
-            name:'docker',
-            component:Docker,
-       },
+    mode: 'history',
+    routes: [
         {
-            path:'/network',
-            name:'network',
-            component:Network,
+            path: '/',
+            name: 'home',
+            component: Home,
         },
         {
-            path:'/leetcode',
-            name:'leetcode',
-            component:Leetcode,
+            path: '/docker',
+            name: 'docker',
+            component: Docker,
         },
-       {
-            path:'/login',
-            name:'login',
-            component:Login,
-       },
-       {
-            path:'/admin',
-            name:'admin',
-            component:Admin,
-       },
-       {
-            path:'/about',
-            name:'about',
-            component:About,
-       }
+        {
+            path: '/network',
+            name: 'network',
+            component: Network,
+        },
+        {
+            path: '/leetcode',
+            name: 'leetcode',
+            component: Leetcode,
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login,
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: Admin,
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: About,
+        }
     ]
 });
