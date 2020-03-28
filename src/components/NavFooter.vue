@@ -3,13 +3,13 @@
     <div class="container">
       <div class="left">
         <a href="https://github.com/liuhanwen1996" target="_blank">
-          <img src="../assets/github.png" height="35px" />Github:https://github.com/liuhanwen1996
+          <div class="logo1"></div>Github:https://github.com/liuhanwen1996
         </a>
       </div>
       <div class="left">
-        <p>
-          <img src="../assets/beian.png" height="20px" />备案/许可证编号为：冀ICP备19017112号
-        </p>
+        <a>
+          <div class="logo2"></div>备案/许可证编号为：冀ICP备19017112号
+        </a>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ export default {
   background-color: black;
   border-top: 1px solid #ff6600;
   //text-align: center;
-  font-weight: bold;
+  //font-weight: bold;
   font-size: 12px;
   color: white;
   text-align: center;
@@ -49,6 +49,22 @@ export default {
       line-height: 48px;
       font-size: 13px;
       color: #f5f5f5;
+      .logo1 {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("../assets/github.png");
+        background-size: 20px 20px;
+        margin-right: 5px;
+      }
+      .logo2 {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("../assets/beian.png");
+        background-size: 20px 20px;
+        margin-right: 5px;
+      }
     }
     p {
       font-size: 13px;

@@ -4,11 +4,11 @@
       <div class="blog-title">
         <a href="/">长情驿站</a>
       </div>
-      <div class="header-search">
+      <!-- <div class="header-search">
         <el-input placeholder="请输入内容" v-model="inputs">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
-      </div>
+      </div>-->
       <div class="blog-order">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router="true">
           <el-menu-item index="/">首页</el-menu-item>
