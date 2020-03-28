@@ -2,46 +2,53 @@
   <div class="header">
     <div class="container">
       <div class="blog-title">
-        <a href="www.baidu.com">长情驿站</a>
+        <a href="/">长情驿站</a>
       </div>
       <div class="header-search">
-        <Input search placeholder="search..." />
+        <el-input placeholder="请输入内容" v-model="inputs">
+          <i slot="prefix" class="el-input__icon el-icon-search"></i>
+        </el-input>
       </div>
       <div class="blog-order">
-        <Menu mode="horizontal" active-name="1">
-          <MenuItem name="1" to="/">首页</MenuItem>
-          <MenuItem name="2" to="/docker">Docker系列</MenuItem>
-          <MenuItem name="3" to="/network">计算机网络</MenuItem>
-          <MenuItem name="4" to="/leetcode">Leetcode</MenuItem>
-          <Submenu name="5">
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router="true">
+          <el-menu-item index="/">首页</el-menu-item>
+          <el-menu-item index="/docker">Docker系列</el-menu-item>
+          <el-menu-item index="/network">计算机网络</el-menu-item>
+          <el-menu-item index="/leecode">Leetcode</el-menu-item>
+          <el-submenu index="4">
             <template slot="title">更多分类</template>
-            <MenuItem name="3-1" to="/datastructure">数据结构</MenuItem>
-            <MenuItem name="3-2" to="/nginx">Nginx</MenuItem>
-            <MenuItem name="3-3" to="/k8s">K8S</MenuItem>
-            <MenuItem name="3-4" to="/linux">Linux</MenuItem>
-          </Submenu>
-          <MenuItem name="6" to="/about">关于</MenuItem>
-        </Menu>
+            <el-menu-item index="/data">数据结构</el-menu-item>
+            <el-menu-item index="/nginx">Nginx</el-menu-item>
+            <el-menu-item index="/k8s">K8S</el-menu-item>
+            <el-menu-item index="/linux">Linux</el-menu-item>
+          </el-submenu>
+          <el-menu-item index="/about">关于</el-menu-item>
+        </el-menu>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "nav-header"
+  name: "nav-header",
+  data() {
+    return {
+      activeIndex: "1",
+      inputs: ""
+    };
+  }
 };
 </script>
 
 <style lang="scss">
 .header {
-  height: 55px;
+  height: 60px;
   border-bottom: #e5e5e5 solid 1px;
   background: #fff;
   padding-right: 5000px;
   padding-left: 200px;
   position: fixed;
   .container {
-    height: 50px;
     width: 1440px;
     display: flex;
     justify-content: space-between;
@@ -51,8 +58,9 @@ export default {
     }
     .blog-title {
       a {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 22px;
+        height: 60px;
+        line-height: 60px;
         color: #333333;
       }
     }
