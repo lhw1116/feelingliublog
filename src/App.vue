@@ -6,20 +6,15 @@
 
 <script>
 export default {
-  name: 'app',
-  components: {
-    
+  name: "app",
+  components: {},
+  data() {
+    return {};
   },
-  data(){
-    return {
-    }
-  },
-  mounted(){
-
-  }
-}
+  mounted() {}
+};
 </script>
 
 <style>
-@import './assets/scss/reset.scss';
+@import "./assets/scss/reset.scss";
 </style>
