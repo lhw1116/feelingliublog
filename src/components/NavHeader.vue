@@ -14,7 +14,7 @@
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/docker">Docker系列</el-menu-item>
           <el-menu-item index="/network">计算机网络</el-menu-item>
-          <el-menu-item index="/leecode">Leetcode</el-menu-item>
+          <el-menu-item index="/leetcode">Leetcode</el-menu-item>
           <el-submenu index="4">
             <template slot="title">更多分类</template>
             <el-menu-item index="/data">数据结构</el-menu-item>
