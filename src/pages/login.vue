@@ -40,15 +40,21 @@ export default {
     login() {
       let { username, password } = this;
       this.axios
-        .post("/api/auth", {
+        .post("/auth", {
           username,
           password
         })
         .then(function(response) {
+          console.log("666");
           this.$cookie.set("token", response.data.data.token, {
             expires: "Session"
           });
-          this.$message.success("注册成功");
+          this.$router.push({
+            name: "admin",
+            params: {
+              from: "login"
+            }
+          });
         });
     },
     ...mapActions(["saveUserName"])

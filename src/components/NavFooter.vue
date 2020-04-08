@@ -23,7 +23,6 @@ export default {
 
 <style lang="scss">
 .nav-footer {
-  margin-top: 100px;
   .container {
     height: 50px;
     width: 1560px;

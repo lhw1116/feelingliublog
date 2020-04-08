@@ -21,6 +21,9 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
+            meta: {
+                title: '长情驿站'
+            }
         },
         {
             path: '/docker',

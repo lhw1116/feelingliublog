@@ -10,7 +10,7 @@
         </el-input>
       </div>-->
       <div class="blog-order">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router="true">
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/docker">Docker系列</el-menu-item>
           <el-menu-item index="/network">计算机网络</el-menu-item>
@@ -51,16 +51,16 @@ export default {
   .container {
     width: 1440px;
     display: flex;
+    height: 61px;
     justify-content: space-between;
     align-items: center;
-    .blog-order {
-      margin-left: 500px;
-    }
+
     .blog-title {
+      height: 61px;
       a {
         font-size: 22px;
-        height: 60px;
-        line-height: 60px;
+
+        line-height: 61px;
         color: #333333;
       }
     }

@@ -23,7 +23,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+
   .container {
     display: inline-block;
     font-size: 36px;
