@@ -33,7 +33,8 @@ export default {
   data() {
     return {
       username: "",
-      password: ""
+      password: "",
+      token: "",
     };
   },
   methods: {
@@ -43,18 +44,9 @@ export default {
         .post("/auth", {
           username,
           password
-        })
-        .then(function(response) {
-          console.log("666");
-          this.$cookie.set("token", response.data.data.token, {
-            expires: "Session"
-          });
-          this.$router.push({
-            name: "admin",
-            params: {
-              from: "login"
-            }
-          });
+        }).then((res) =>{
+          this.$cookie.set('token',res.token,{expires:'1M'});
+          this.$router.push('/admin')
         });
     },
     ...mapActions(["saveUserName"])
