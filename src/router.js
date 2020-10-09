@@ -1,18 +1,14 @@
 import Vue from 'vue'
+import Layout from './layout/index'
 import Router from 'vue-router'
-import Home from './pages/home'
-import Login from './pages/login'
-import Network from './pages/network'
-import Docker from './pages/docker'
-import Leetcode from './pages/leetcode'
-import Datastrut from './pages/datastrut'
-import Linux from './pages/linux'
-import K8S from './pages/k8s'
-import Nginx from './pages/nginx'
 import Admin from './pages/admin'
-import About from './pages/about'
+
 
 Vue.use(Router);
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
 
 export default new Router({
     mode: 'history',
@@ -20,60 +16,71 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: Home,
-            meta: {
-                title: '长情驿站'
-            }
-        },
-        {
-            path: '/docker',
-            name: 'docker',
-            component: Docker,
-        },
-        {
-            path: '/network',
-            name: 'network',
-            component: Network,
-        },
-        {
-            path: '/leetcode',
-            name: 'leetcode',
-            component: Leetcode,
-        },
-        {
-            path: '/datastrut',
-            name: 'datastrut',
-            component: Datastrut,
-        },
-        {
-            path: '/nginx',
-            name: 'nginx',
-            component: Nginx,
-        },
-        {
-            path: '/k8s',
-            name: 'k8s',
-            component: K8S,
-        },
-        {
-            path: '/linux',
-            name: 'linux',
-            component: Linux,
+            component: Layout,
+            children: [
+                {
+                    path: "",
+                    name: "Home",
+                    hidden: true,
+                    component: () => import("./pages/home"),
+                    meta: { title: "有心人驿站-首页" }
+                },
+                {
+                    path: "/golang",
+                    name: "Golang",
+                    hidden: true,
+                    component: () => import("./pages/golang"),
+                    meta: { title: "有心人驿站-Golang" }
+                },
+                {
+                    path: "/docker",
+                    name: "Docker",
+                    hidden: true,
+                    component: () => import("./pages/docker"),
+                    meta: { title: "有心人驿站-Docker" }
+                },
+                {
+                    path: "/k8s",
+                    name: "K8S",
+                    hidden: true,
+                    component: () => import("./pages/k8s"),
+                    meta: { title: "有心人驿站-K8S" }
+                },
+                {
+                    path: "/count",
+                    name: "Count",
+                    hidden: true,
+                    component: () => import("./pages/count"),
+                    meta: { title: "有心人驿站-算法" }
+                },
+                {
+                    path: "/pc",
+                    name: "PC",
+                    hidden: true,
+                    component: () => import("./pages/pc"),
+                    meta: { title: "有心人驿站-操作系统" }
+                },
+                {
+                    path: "/about",
+                    name: "About",
+                    hidden: true,
+                    component: () => import("./pages/about"),
+                    meta: { title: "有心人驿站-关于" }
+                }
+
+            ]
         },
         {
             path: '/login',
             name: 'login',
-            component: Login,
+            component: Layout,
+            meta: { title: "有心人驿站-登录" }
         },
         {
             path: '/admin',
             name: 'admin',
             component: Admin,
+            meta: { title: "有心人驿站" }
         },
-        {
-            path: '/about',
-            name: 'about',
-            component: About,
-        }
     ]
 });

@@ -1,69 +1,47 @@
 <template>
   <div class="header">
     <div class="container">
-      <div class="blog-title">
-        <a href="/">长情驿站</a>
-      </div>
-      <!-- <div class="header-search">
-        <el-input placeholder="请输入内容" v-model="inputs">
-          <i slot="prefix" class="el-input__icon el-icon-search"></i>
-        </el-input>
-      </div>-->
       <div class="blog-order">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
-          <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/docker">Docker系列</el-menu-item>
-          <el-menu-item index="/network">计算机网络</el-menu-item>
-          <el-menu-item index="/leetcode">Leetcode</el-menu-item>
-          <el-submenu index="4">
-            <template slot="title">更多分类</template>
-            <el-menu-item index="/data">数据结构</el-menu-item>
-            <el-menu-item index="/nginx">Nginx</el-menu-item>
-            <el-menu-item index="/k8s">K8S</el-menu-item>
-            <el-menu-item index="/linux">Linux</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="/about">关于</el-menu-item>
-        </el-menu>
+        <Menu></Menu>
+      </div>
+      <div class="blog-search">
+        <Search></Search>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Menu from "./Menu";
+import Search from "./Search";
 export default {
   name: "nav-header",
+  components: {
+    Menu,
+    Search,
+  },
   data() {
     return {
       activeIndex: "1",
-      inputs: ""
+      inputs: "",
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss">
-.header {
+.container {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.blog-order {
+  width: 860px;
+}
+.search {
+  width: 200px;
   height: 60px;
-  border-bottom: #e5e5e5 solid 1px;
-  background: #fff;
-  padding-right: 5000px;
-  padding-left: 200px;
-  position: fixed;
-  .container {
-    width: 1440px;
-    display: flex;
-    height: 61px;
-    justify-content: space-between;
-    align-items: center;
-
-    .blog-title {
-      height: 61px;
-      a {
-        font-size: 22px;
-
-        line-height: 61px;
-        color: #333333;
-      }
-    }
-  }
 }
 </style>

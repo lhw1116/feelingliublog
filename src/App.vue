@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view />
+    <Backtop></Backtop>
   </div>
 </template>
 
 <script>
+import Backtop from "./components/Backtop";
 export default {
   name: "app",
-  components: {},
   data() {
     return {};
   },
-  mounted() {}
+  components: {
+    Backtop,
+  },
+  mounted() {},
 };
 </script>
-
-<style>
-@import "./assets/scss/reset.scss";
-</style>
