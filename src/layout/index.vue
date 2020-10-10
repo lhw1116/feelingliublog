@@ -37,13 +37,10 @@ export default {
 #components-layout-demo-basic .ant-layout-footer {
   background: #959da3;
   color: #fff;
-}
-#components-layout-demo-basic .ant-layout-footer {
   line-height: 1.5;
 }
 #components-layout-demo-basic .ant-layout-content {
-  background: rgba(16, 142, 233, 1);
-  color: #fff;
+  color: rgb(223, 203, 203);
   min-height: 120px;
   line-height: 120px;
 }

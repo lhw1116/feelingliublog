@@ -3,7 +3,6 @@ import Layout from './layout/index'
 import Router from 'vue-router'
 import Admin from './pages/admin'
 
-
 Vue.use(Router);
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -20,55 +19,75 @@ export default new Router({
             children: [
                 {
                     path: "",
-                    name: "Home",
                     hidden: true,
                     component: () => import("./pages/home"),
-                    meta: { title: "有心人驿站-首页" }
+                    meta: { title: "有心人驿站" }
                 },
                 {
                     path: "/golang",
-                    name: "Golang",
                     hidden: true,
                     component: () => import("./pages/golang"),
-                    meta: { title: "有心人驿站-Golang" }
+                    meta: { title: "有心人驿站" }
                 },
                 {
                     path: "/docker",
-                    name: "Docker",
                     hidden: true,
                     component: () => import("./pages/docker"),
-                    meta: { title: "有心人驿站-Docker" }
+                    meta: { title: "有心人驿站" }
                 },
                 {
-                    path: "/k8s",
-                    name: "K8S",
+                    path: "k8s",
                     hidden: true,
                     component: () => import("./pages/k8s"),
-                    meta: { title: "有心人驿站-K8S" }
+                    meta: { title: "有心人驿站" }
                 },
                 {
-                    path: "/count",
-                    name: "Count",
+                    path: "count",
                     hidden: true,
                     component: () => import("./pages/count"),
-                    meta: { title: "有心人驿站-算法" }
+                    meta: { title: "有心人驿站" }
                 },
                 {
-                    path: "/pc",
-                    name: "PC",
+                    path: "pc",
                     hidden: true,
                     component: () => import("./pages/pc"),
-                    meta: { title: "有心人驿站-操作系统" }
+                    meta: { title: "有心人驿站" }
                 },
-                {
-                    path: "/about",
-                    name: "About",
-                    hidden: true,
-                    component: () => import("./pages/about"),
-                    meta: { title: "有心人驿站-关于" }
-                }
-
             ]
+        },
+        {
+            path: '/articles',
+            name: 'articles',
+            component: Layout,
+            children: [
+                {
+                    path: "",
+                    name: "Articles",
+                    hidden: true,
+                    component: () => import("./pages/type"),
+                    meta: { title: "有心人驿站" }
+                },
+            ]
+        },
+        {
+            path: '/home',
+            name: 'home',
+            component: Layout,
+            children: [
+                {
+                    path: "",
+                    hidden: true,
+                    redirect: '/',
+                    component: () => import("./pages/type"),
+                    meta: { title: "有心人驿站" }
+                },
+            ]
+        },
+        {
+            path: '/about',
+            name: 'home',
+            component: Layout,
+            meta: { title: "有心人驿站-关于" }
         },
         {
             path: '/login',

@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss">
 .pic-plug {
-  height: 150px;
+  height: 180px;
   background-image: url("./../assets/background.jpg");
   background-size: cover;
   display: flex;

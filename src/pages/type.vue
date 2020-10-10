@@ -25,7 +25,7 @@
   </div>
 </template>
 <script>
-import { fetchArticlebytype } from "../api/index";
+import { fetchList } from "../api/index";
 export default {
   data() {
     return {
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     getList() {
-      fetchArticlebytype("docker").then((response) => {
+      fetchList().then((response) => {
         this.listData = response.data;
       });
     },

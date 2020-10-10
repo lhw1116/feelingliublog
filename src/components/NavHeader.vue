@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss">
 .container {
-  width: 1400px;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
