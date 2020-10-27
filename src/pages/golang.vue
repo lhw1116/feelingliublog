@@ -18,8 +18,12 @@
           </router-link></span
         >
         <img slot="extra" width="222" alt="logo" src="../assets/gopher.png" />
-        <span class="zhengwen">{{ item.content + "..." }}</span>
-        <span class="ctime">创建时间：{{ item.time }}</span>
+        <span class="zhengwen">{{ item.introduce + "..." }}</span>
+        <span class="ctime"
+          ><a-icon type="clock-circle" /> 创建时间：{{
+            item.created_time
+          }}</span
+        >
       </a-list-item>
     </a-list>
   </div>
@@ -29,7 +33,7 @@ import { fetchArticlebytype } from "../api/index";
 export default {
   data() {
     return {
-      listData: null,
+      listData: [],
       pagination: {
         onChange: (page) => {
           console.log(page);
@@ -81,8 +85,9 @@ export default {
   text-align: left;
   color: #8c8c8c;
   margin-top: 15px;
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
+  color: #595959;
   bottom: 0;
 }
 .ant-layout-content {

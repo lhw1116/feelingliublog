@@ -10,7 +10,7 @@
         <span class="art-title"
           ><router-link
             :to="{
-              path: '/articles',
+              path: '/article',
               query: { id: item.id },
             }"
           >
@@ -29,7 +29,7 @@ import { fetchList } from "../api/index";
 export default {
   data() {
     return {
-      listData: null,
+      listData: [],
       pagination: {
         onChange: (page) => {
           console.log(page);

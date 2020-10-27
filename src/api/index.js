@@ -55,3 +55,11 @@ export function uploadImage(data) {
         data
     });
 }
+
+export function login(data) {
+    return request({
+        url: "/login",
+        method: "post",
+        data
+    });
+}

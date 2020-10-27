@@ -29,7 +29,7 @@ import { fetchArticlebytype } from "../api/index";
 export default {
   data() {
     return {
-      listData: null,
+      listData: [],
       pagination: {
         onChange: (page) => {
           console.log(page);

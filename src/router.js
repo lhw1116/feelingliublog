@@ -14,7 +14,6 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'home',
             component: Layout,
             children: [
                 {
@@ -70,6 +69,18 @@ export default new Router({
             ]
         },
         {
+            path: '/article',
+            component: Layout,
+            children: [
+                {
+                    path: "",
+                    hidden: true,
+                    component: () => import("./pages/article"),
+                    meta: { title: "有心人驿站-文章" }
+                },
+            ]
+        },
+        {
             path: '/home',
             name: 'home',
             component: Layout,
@@ -85,15 +96,15 @@ export default new Router({
         },
         {
             path: '/about',
-            name: 'home',
+            name: 'about',
             component: Layout,
             meta: { title: "有心人驿站-关于" }
         },
         {
             path: '/login',
             name: 'login',
-            component: Layout,
-            meta: { title: "有心人驿站-登录" }
+            component: () => import("./pages/login"),
+            meta: { title: "有心人驿站-登录" },
         },
         {
             path: '/admin',
